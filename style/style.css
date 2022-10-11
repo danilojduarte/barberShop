@@ -1,3 +1,4 @@
+/* Geral */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 :root {
     font-size: 62.5%;
 
-    --gray-color: hsl(0, 0%, 60%);
+    --gray-color: hsl(0, 0%, 75%);
     --titulo-color: hsl(33, 48%, 66%);
     --primary-color: hsl(0, 0%, 11%);
     --extra-color: hsl(32, 100%, 93%);
@@ -24,29 +25,40 @@ body {
     background: var(--back-color);
     text-align: center;
 }
-
-header {
+.box-wrapper {
     width: 37.5rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin-inline: auto;
+}
+
+/* Iniciando Header */
+header {
     margin-top: 4.1rem;
 
 }
+header::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background: var(--titulo-color);
+    display: block;
 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 h1 {
     font-size: 3.4rem;
-    line-height: 130px;
+    line-height: 120px;
     color: var(--gray-color);
 
     margin-bottom: 2.4rem;
 }
-
-h4 {
-    font-size: 1.4rem;
-    color: var(--titulo-color);
-    margin-bottom: 1.6rem;
+h3 {
+    font-size: 2.9rem;
+    color: var(--primary-color);
+    margin-bottom: 1.9rem;
 }
-
 p {
     font-size: 1.8rem;
     line-height: 150%;
@@ -55,7 +67,6 @@ p {
     
     margin-bottom: 3.2rem;
 }
-
 button {
     background: var(--gray-color);
     color: var(--primary-color);
@@ -64,7 +75,7 @@ button {
     font-weight: 700;
     
 
-    border: none;
+    border: 1px solid var(--gray-color);
     border-radius: 4rem;
 
     margin-bottom: 6rem;
@@ -79,18 +90,23 @@ button {
 
     margin-right: auto;
     margin-left: auto;
+    cursor: pointer;
 }
-
-div.destaques {
+header img {
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: 0 2rem;
+}
+.destaques {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     width: 32.7rem;
-    height: 47rem;
-    padding-top: 6rem;
-    
+    padding-block: 4rem;
     margin-inline: auto;
+
     border-radius: 1rem;
 
 
@@ -111,4 +127,18 @@ div.destaques {
     color: var(--white-color);
     font-size: 1.6rem;
     line-height: 150%;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.6rem 2.4rem;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
