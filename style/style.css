@@ -7,6 +7,7 @@
 :root {
     font-size: 62.5%;
 
+    --gray-color: hsl(0, 0%, 60%);
     --titulo-color: hsl(33, 48%, 66%);
     --primary-color: hsl(0, 0%, 11%);
     --extra-color: hsl(32, 100%, 93%);
@@ -35,7 +36,7 @@ header {
 h1 {
     font-size: 3.4rem;
     line-height: 130px;
-    color: var(--titulo-color);
+    color: var(--gray-color);
 
     margin-bottom: 2.4rem;
 }
@@ -56,8 +57,8 @@ p {
 }
 
 button {
-    background: var(--titulo-color);
-    color: var(--white-color);
+    background: var(--gray-color);
+    color: var(--primary-color);
     text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: 700;
@@ -78,4 +79,36 @@ button {
 
     margin-right: auto;
     margin-left: auto;
+}
+
+div.destaques {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 32.7rem;
+    height: 47rem;
+    padding-top: 6rem;
+    
+    margin-inline: auto;
+    border-radius: 1rem;
+
+
+    background-color: var(--gray-color);
+    color: var(--white-color);
+    gap: 6rem;
+}
+.destaque h3 {
+    font-size: 4.8rem;
+    color: var(--primary-color);
+    line-height: 130%;
+
+    margin-bottom: 0.4rem
+}
+
+.destaque p {
+    margin: 0;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    line-height: 150%;
 }
