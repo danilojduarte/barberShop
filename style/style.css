@@ -10,7 +10,7 @@
 
     --gray-color: hsl(0, 0%, 75%);
     --titulo-color: hsl(60, 48%, 80%);
-    --primary-color: hsl(0, 0%, 11%);
+    --primary-color: hsl(0, 0%, 20%);
     --extra-color: hsl(32, 100%, 93%);
     --back-color: hsl(0, 0%, 100%);
 
@@ -18,10 +18,16 @@
     --white-color: #fff;
 
 
-    --color-black-1:#0D0D0D;
+    --color-black-1:rgb(5, 140, 10);
     --color-2:#BF9663;
     --color-3:#D97016;
+    --color-4:#2B4F71;
+    --color-5:#E9EDF8;
+    --color-6:#C9CFDF;
+    --color-7:#657A97;
+    
 
+    --nav-height:7.2rem;
 }
 
 /* alterar cores para ( #0DO0D0D | #BF9663 | #D97016 ) */
@@ -39,14 +45,14 @@ body {
 
 /* Iniciando Header */
 header {
-    margin-top: 4.1rem;
+    margin-top: calc(4.1rem + var(--nav-height));
 
 }
 header::before {
     content: "";
     width: 100vw;
-    height: 100vh;
-    background: var(--color-black-1);
+    height: calc(108rem + var(--nav-height));
+    background: var(--color-7);
     display: block;
 
     position: absolute;
@@ -54,35 +60,43 @@ header::before {
     left: 0;
     z-index: -1;
 }
+.logo{
+    color: var(--color-3);
+    text-decoration: none;
+}
+.logo span {
+    color: var(--color-5);
+}
+
 h1 {
     font-size: 3.4rem;
     line-height: 120px;
-    color: var(--color-3);
+    color: var(--color-5);
 
     margin-bottom: 2.4rem;
 }
 h3 {
     font-size: 2.9rem;
-    color: var(--color-2);
+    color: var(--white-color);
     margin-bottom: 1.9rem;
 }
 p {
     font-size: 1.8rem;
     line-height: 150%;
     font-weight: 400;
-    color: var(--white-color);
+    color: var(--color-5);
     
     margin-bottom: 3.2rem;
 }
 button {
     background: var(--color-3);
-    color: var(--white-color);
+    color: var(--color-5);
     text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: 700;
     
 
-    border: 1px solid var(--gray-color);
+    border: none;
     border-radius: 4rem;
 
     margin-bottom: 6rem;
@@ -117,13 +131,13 @@ header img {
     border-radius: 1rem;
 
 
-    background-color: var(--color-2);
+    background-color: var(--color-4 );
     color: var(--white-color);
     gap: 6rem;
 }
 .destaque h3 {
     font-size: 4.8rem;
-    color: var(--primary-color);
+    color: var(--color-3);
     line-height: 130%;
 
     margin-bottom: 0.4rem
@@ -142,7 +156,7 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    padding: 1.6rem 2.4rem;
+    height: var(--nav-height);
 
     position: fixed;
     top: 0;
