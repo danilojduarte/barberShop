@@ -168,7 +168,7 @@ nav .box-wrapper {
     align-items: center;
     justify-content: space-between;
 }
-nav.scroll {
+.scroll {
     background: var(--color-3);
     width: 100vw;
 }
